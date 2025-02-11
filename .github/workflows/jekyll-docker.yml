@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tỏ Tình</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #ffe6e6;
+        }
+        h1 {
+            color: #ff4d4d;
+        }
+        .buttons {
+            margin-top: 20px;
+            position: relative;
+            height: 200px;
+        }
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: 0.2s;
+            position: absolute;
+        }
+        #yes {
+            background-color: #ff4d4d;
+            color: white;
+            position: relative;
+        }
+        #no {
+            background-color: #999;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bạn đi chơi valentine với mình nha ❤️❤️</h1>
+    <div class="buttons">
+        <button id="yes">Đi luônnnn ❤️</button>
+        <button id="no">Không đi đâuu</button>
+    </div>
+
+    <script>
+        let yesButton = document.getElementById("yes");
+        let noButton = document.getElementById("no");
+
+        yesButton.addEventListener("click", function() {
+            alert("Tui biết mà hẹn bạn.... ");
+        });
+
+        noButton.addEventListener("mouseover", function() {
+            let maxWidth = window.innerWidth - noButton.offsetWidth - 20;
+            let maxHeight = window.innerHeight - noButton.offsetHeight - 20;
+            let x = Math.random() * maxWidth;
+            let y = Math.random() * maxHeight;
+            noButton.style.left = x + "px";
+            noButton.style.top = y + "px";
+        });
+
+        noButton.addEventListener("click", function() {
+            let maxWidth = window.innerWidth - noButton.offsetWidth - 20;
+            let maxHeight = window.innerHeight - noButton.offsetHeight - 20;
+            let x = Math.random() * maxWidth;
+            let y = Math.random() * maxHeight;
+            noButton.style.left = x + "px";
+            noButton.style.top = y + "px";
+        });
+    </script>
+</body>
+</html>
